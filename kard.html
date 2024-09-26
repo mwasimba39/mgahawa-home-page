@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Restaurant Website</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add subtle hover animations */
+        .hover-animate {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .hover-animate:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-yellow-800 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Left side (Logo) -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="flex items-center py-2 text-gray-100 hover-animate">
+                        <img src="logo.webp" class="h-8 w-8" alt="logo">
+                        <span class="font-bold text-lg text-yellow-300">Ka Mgahawa</span>
+                    </a>
+                </div>
+
+                <!-- Primary Navbar links -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#home" class="py-2 px-3 text-yellow-300 hover:text-gray-200 text-lg hover-animate">Home</a>
+                    <a href="#about" class="py-2 px-3 text-yellow-300 hover:text-gray-200 text-lg hover-animate">About</a>
+                    <a href="#services" class="py-2 px-3 text-yellow-300 hover:text-gray-200 text-lg hover-animate">Services</a>
+                    <a href="#menu" class="py-2 px-3 text-yellow-300 hover:text-gray-200 text-lg hover-animate">Menu</a>
+                    <a href="#contact" class="py-2 px-3 text-yellow-300 hover:text-gray-200 text-lg hover-animate">Contact</a>
+                </div>
+
+                <!-- Hamburger Icon for Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <svg class="w-6 h-6 text-yellow-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="mobile-menu hidden md:hidden bg-gray-800">
+            <a href="#home" class="block py-2 px-4 text-sm text-yellow-300 hover:bg-gray-700">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-yellow-300 hover:bg-gray-700">About</a>
+            <a href="#services" class="block py-2 px-4 text-sm text-yellow-300 hover:bg-gray-700">Services</a>
+            <a href="#menu" class="block py-2 px-4 text-sm text-yellow-300 hover:bg-gray-700">Menu</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-yellow-300 hover:bg-gray-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-yellow-500 py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold text-white mb-4">Welcome to Ka Mgahawa</h1>
+            <p class="text-lg text-yellow-100 mb-8">Enjoy the best meals and services at our restaurant</p>
+            <a href="#menu" class="bg-white text-yellow-500 px-6 py-2 rounded-lg font-bold hover:bg-yellow-600 hover:text-white transition duration-300">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-700 mb-6">About Us</h2>
+            <p class="text-lg text-gray-600 mb-8">Ka Mgahawa offers a variety of delicious meals crafted with passion and love. We strive to provide an unforgettable dining experience.</p>
+            <div class="flex flex-wrap justify-center space-x-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-animate">
+                    <img class="w-full h-48 object-cover rounded-lg" src="chef.webp" alt="Chef">
+                    <h3 class="text-xl font-bold mt-4">Our Chef</h3>
+                    <p class="mt-2 text-gray-600">Expert in crafting unique and delicious meals.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-animate">
+                    <img class="w-full h-48 object-cover rounded-lg" src="restaurant.webp" alt="Restaurant">
+                    <h3 class="text-xl font-bold mt-4">Our Restaurant</h3>
+                    <p class="mt-2 text-gray-600">A cozy place where you can relax and enjoy your meal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-yellow-500 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Our Services</h2>
+            <div class="flex flex-wrap justify-center space-x-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-animate">
+                    <h3 class="text-xl font-bold mb-4">Dine-In</h3>
+                    <p class="text-gray-600">Enjoy a relaxing dining experience at our restaurant.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-animate">
+                    <h3 class="text-xl font-bold mb-4">Takeaway</h3>
+                    <p class="text-gray-600">Grab your favorite meal and enjoy it wherever you are.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover-animate">
+                    <h3 class="text-xl font-bold mb-4">Delivery</h3>
+                    <p class="text-gray-600">Have your meal delivered right to your door.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-700 mb-6">Our Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover-animate">
+                    <img class="w-full h-48 object-cover" src="piza.webp" alt="Pizza">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Delicious Pizza</h3>
+                        <p class="mt-2 text-gray-600">A tasty pizza you can't resist.</p>
+                        <p class="font-bold mt-4 text-green-600">TSh 10,000</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover-animate">
+                    <img class="w-full h-48 object-cover" src="burger.webp" alt="Burger">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Juicy Burger</h3>
+                        <p class="mt-2 text-gray-600">A burger packed with flavor.</p>
+                        <p class="font-bold mt-4 text-green-600">TSh 7,500</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover-animate">
+                    <img class="w-full h-48 object-cover" src="makande.webp" alt="Makande">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Traditional Makande</h3>
+                        <p class="mt-2 text-gray-600">A Tanzanian classic with a twist.</p>
+                        <p class="font-bold mt-4 text-green-600">TSh 5,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-yellow-500 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Contact Us</h2>
+            <p class="text-lg text-yellow-100 mb-8">Reach out to us for reservations, inquiries, or feedback.</p>
+            <a href="mailto:info@kamgahawa.com" class="bg-white text-yellow-500 px-6 py-2 rounded-lg font-bold hover:bg-yellow-600 hover:text-white transition duration-300">Email Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yellow-800 py-6">
+        <div class="container mx-auto px-4 text-center text-white">
+            &copy; 2024 Ka Mgahawa. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        const btn = document.querySelector('.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
